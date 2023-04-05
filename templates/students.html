@@ -7,11 +7,40 @@
 		<title>Document</title>
 	</head>
 	<body>
-		{% for student in students %}
-		<p>
-			{{ student[0] }} {{ student[1] }} {{ student[2] }} {{ student[3] }}
-			{{ student[4] }}
-		</p>
-		{% endfor %}
+		<table>
+			<tr>
+				<th>ID</th>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Email</th>
+				<th>Phone</th>
+				<th>Date of Birth</th>
+				<th>Gender</th>
+				<th>Address Line 1</th>
+				<th>Address Line 2</th>
+				<th>City</th>
+				<th>State/Province</th>
+				<th>Postal/Zip Code</th>
+				<th>Country</th>
+			</tr>
+			{% for student in students %}
+			<tr>
+				<td>{{ student[0] }}</td>
+				<td>{{ student[1] }}</td>
+				<td>{{ student[2] }}</td>
+				<td>{{ student[3] }}</td>
+				<td>{{ student[4] }}</td>
+				<td>{{ student[5] }}</td>
+				<td>{{ student[6] }}</td>
+				<td>{{ student[7] }}</td>
+				<td>{{ student[8] }}</td>
+				<td>{{ student[9] }}</td>
+				<td>{{ student[10] }}</td>
+				<td>{{ student[11] }}</td>
+				<td>{{ student[12] }}</td>
+			</tr>
+			{% endfor %}
+		</table>
 	</body>
+	<!-- <script src="https://cdn.tailwindcss.com"></script> -->
 </html>

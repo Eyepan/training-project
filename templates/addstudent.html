@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<form method="POST" action="{{ url_for('add_student') }}">
+			<!--     first_name = request.form.get("first_name")
+    last_name = request.form.get("last_name")
+    mail = request.form.get("mail")
+    phone = request.form.get("phone")
+    dob = request.form.get("dob")
+    gender = request.form.get("gender")
+    address_1 = request.form.get("address_1")
+    address_2 = request.form.get("address_2")
+    city = request.form.get("city")
+    state = request.form.get("state")
+    zip = request.form.get("zip")
+    country = request.form.get("country") -->
+			<label for="first_name">First Name</label>
+			<input type="text" name="first_name" id="first_name" />
+			<label for="last_name">Last Name</label>
+			<input type="text" name="last_name" id="last_name" />
+			<label for="mail">Email</label>
+			<input type="text" name="mail" id="mail" />
+			<label for="phone">Phone</label>
+			<input type="text" name="phone" id="phone" />
+			<label for="dob">Date of Birth</label>
+			<input type="text" name="dob" id="dob" />
+			<label for="gender">Gender</label>
+			<input type="text" name="gender" id="gender" />
+			<label for="address_1">Address Line 1</label>
+			<input type="text" name="address_1" id="address_1" />
+			<label for="address_2">Address Line 2</label>
+			<input type="text" name="address_2" id="address_2" />
+			<label for="city">City</label>
+			<input type="text" name="city" id="city" />
+			<label for="state">State/Province</label>
+			<input type="text" name="state" id="state" />
+			<label for="zip">Postal/Zip Code</label>
+			<input type="text" name="zip" id="zip" />
+			<label for="country">Country</label>
+			<input type="text" name="country" id="country" />
+			<input type="submit" value="Submit" />
+		</form>
+	</body>
+</html>
