@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 from database import DB
 
 
@@ -8,12 +8,13 @@ my_db = DB()
 
 @app.route("/")
 def index():
-    return "hi there"
+    return render_template("index.html")
 
 
 @app.route("/students")
 def show_students():
-    return my_db.run_query("SELECT * FROM students")
+    students = my_db.run_query("SELECT * FROM students")
+    return render_template("students.html", students=students)
 
 
 if __name__ == "__main__":

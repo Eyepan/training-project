@@ -19,6 +19,9 @@ class DB:
                 zip TEXT NOT NULL,
                 country TEXT NOT NULL
             )""")
+        if self.run_query("select * from students") is None:
+            self.run_query("INSERT INTO students(first_name, last_name, mail, phone, dob, gender, address_1, address_2, city, state, zip, country) VALUES(:f, :l, :m, :p, :d, :g, :a1, :a2, :c, :s, :z, :co)",
+                           f="Bob", l="Reacher", m="dummy@mail.com", p="7904377168", d="14-09-2002", g="M", a1="1234", a2="5678", c="New York", s="New York", z="12345", co="USA")
 
     def run_query(self, query: str, **kwargs):
         conn = sqlite3.connect('database.db')
